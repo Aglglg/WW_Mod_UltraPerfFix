@@ -370,6 +370,46 @@ dc14e209:52d10f2d
 52a54db3:04c66147
 daed0b06:66770668
 
+#Zani
+c28372b3:85ec2897
+6118a560:b0ed27ee
+5261a986:d0a54837
+c4845a7a:00c27c52
+c676996a:95ffd32e
+c91bc37a:ece3d873
+ce1aa29a:3fced3f5
+69ce5914:abda50e1
+71f1a895:99dcc139
+73c4cc50:c47af065
+988c2332:9c4f7ff4
+f005294b:67b12c0f
+ac0a77cf:d5d615ea
+067e9607:ec8b6f6f
+3c1567ae:2ca06361
+4fb245db:a85a8201
+34774f22:0e0839f5
+a7869af0:c529924f
+bfaa82b4:19edc366
+16f888b0:807f1ccc
+66ec53c0:42b5fa05
+b11868b0:cbcc3296
+
+#Ciaccona
+1e072c24:5d57e3c0
+2f590d3f:ff3c7f0b
+3b5e4a9b:794a9112
+4c379f61:52072304
+4e1fdf28:bed72c5b
+852b2b72:050935a1
+fe853fcf:2df6d019
+24af21ae:29fe5a2f
+cca1af56:e10d6e9a
+d89de028:93f05bc1
+b017285b:193c3073
+09e98e33:5db18858
+748f8d97:6e427c76
+4358f290:3633621c
+
 
 #----------------OTHER/NPC/ENEMY--------------
 #CuddleWuddle(Enemy)
@@ -601,6 +641,5 @@ c464c8d5:d45aa60e
 92ab1de5:33e39fcb
 
 
-#Hashpair data Last updated 10 April 2025, some characters' textures might be broken on v2.2
-#Cantarella Updated (minor update in-game v2.2.x)
-#Updated Chixia v2.2 (Injured not included)
+#Hashpair data Last updated 14 May 2025, some characters' textures might be broken on v2.3
+#Added ZANI(CHAIR SHIELD ULTI COMPLETED) & CIACCONA (+MIC)
