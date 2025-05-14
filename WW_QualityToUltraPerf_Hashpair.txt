@@ -647,4 +647,4 @@ c464c8d5:d45aa60e
 
 
 #Hashpair data Last updated 14 May 2025, some characters' textures might be broken on v2.3
-#Added ZANI(CHAIR SHIELD ULTI COMPLETED) & CIACCONA (+MIC)
+#Added ZANI(CHAIR SHIELD ULTI COMPLETED) & CIACCONA (+MIC) & CANTARELLA 2.3
