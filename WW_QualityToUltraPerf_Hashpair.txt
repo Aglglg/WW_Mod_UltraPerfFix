@@ -275,16 +275,16 @@ ab04dbfe:1d0b3072
 2fed1aa0:f71f6d19
 
 #Yangyang
-1a9b9391:7056f9e3
-3bd37212:75744c96
-d25b9648:5c420830
-c3b2a42e:8f252131
 1e9a1fb8:824aab01
-250c59b6:2f0f3415
-ae886086:2fa1eb71
-02e9009d:c934a272
-49b790e0:dd6494d1
+16f9802d:5c97e496
+69c48be0:25317f03
+77fe24ce:63fea3da
+92d4ad47:0ad59b90
+1607589b:a3ee8540
+bd8fff82:b30d7fa9
 cc7a443c:f588baa2
+edf438d9:4ec7ab10
+fc40048f:0a2d5c37
 
 #Yinlin
 1f0f6dc8:6fde1b54
@@ -647,4 +647,4 @@ c464c8d5:d45aa60e
 
 
 #Hashpair data Last updated 14 May 2025, some characters' textures might be broken on v2.3
-#Added ZANI(CHAIR SHIELD ULTI COMPLETED) & CIACCONA (+MIC) & CANTARELLA 2.3
+#Added ZANI(CHAIR SHIELD ULTI COMPLETED) & CIACCONA (+MIC) & CANTARELLA 2.3 & YANGYANG 2.3
