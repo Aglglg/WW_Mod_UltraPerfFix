@@ -4,4 +4,4 @@ Please do:
 2. Make sure you already restart the game in Ultra Performance. Or you start the game while it's already on Ultra Performance graphic setting.
 3. Make sure you tested it first.
 4. Make sure when listing those hashes you're in Ultra FOCUSED state to minimalize error or wrong hashes pairs.
-5. Make sure you don't modify the rust code. Or if you do (to make sure it's working for your own fork/repo), make sure you do not do any malicious things.
+5. Make sure you don't modify the rust code. Or if you do (to make sure it's working for your own fork/repo or any other things), make sure you do not do any malicious things.
