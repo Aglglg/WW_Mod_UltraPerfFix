@@ -399,7 +399,7 @@ bfaa82b4:19edc366
 66ec53c0:42b5fa05
 b11868b0:cbcc3296
 
-#Ciaccona
+#Ciaccona OLD
 1e072c24:5d57e3c0
 2f590d3f:ff3c7f0b
 3b5e4a9b:794a9112
@@ -415,6 +415,38 @@ b017285b:193c3073
 748f8d97:6e427c76
 4358f290:3633621c
 
+#Fleurdelys
+00a2663b:e1875cf5
+1f606caf:5f64944a
+14e47dee:6fe67269
+48e09820:4cd595da
+54d78775:44406e02
+439a22f3:d64a0364
+858f3573:f903b56a
+3766bc13:6a7f4cb7
+73110195:33adb02a
+c344d062:dd776230
+d685d037:2d066e98
+ece8436e:e7d2e763
+
+#Cartethya Doll
+5e36aea1:0595ca5b
+b99ab3d7:8a89eb06
+c3e4dc26:92a82b30
+
+#Cartethya
+ae8fd5fb:08eae7f1
+64cd06f9:d60f474b
+241a6fbe:5fe66a7f
+b0d30838:fefe4ef1
+3ff8b56e:360b6733
+51638d38:16f9f4af
+423ec9ce:a23cf7f8
+fd0268ad:6bd2db15
+1f426e73:9aecdece
+7f08cd4f:fdf68ae5
+052142b5:87d27299
+c5b7aee2:a421b2e0
 
 #----------------OTHER/NPC/ENEMY--------------
 #CuddleWuddle(Enemy)
@@ -646,5 +678,5 @@ c464c8d5:d45aa60e
 92ab1de5:33e39fcb
 
 
-#Hashpair data Last updated 14 May 2025, some characters' textures might be broken on v2.3
-#Added ZANI(CHAIR SHIELD ULTI COMPLETED) & CIACCONA (+MIC) & CANTARELLA 2.3 & YANGYANG 2.3
+#Hashpair data Last updated 12 June 2025
+#Added Fleurdelys & Cartethya, others not yet
