@@ -1,15 +1,17 @@
+use reqwest::blocking::get;
+use rfd::FileDialog;
 use std::collections::{HashMap, HashSet};
 use std::fs::{File, OpenOptions, copy};
 use std::io::{self, BufRead, Write};
 use std::path::{Path, PathBuf};
-use rfd::FileDialog;
-use reqwest::blocking::get;
 
 const BACKUP_EXTENSION: &str = "ini_bakcup_from_ultraperf_fixer_tool";
 const HASH_URL: &str = "https://raw.githubusercontent.com/Aglglg/WW_Mod_UltraPerfFix/refs/heads/main/WW_QualityToUltraPerf_Hashpair.txt";
-fn main() {    
+fn main() {
     // Open file dialog for folder selection
-    println!("Select your \"Mods\" folder(D:\\WWMI\\Mods), or single mod folder (D:\\WWMI\\Mods\\RoverMod) ");
+    println!(
+        "Select your \"Mods\" folder(D:\\WWMI\\Mods), or single mod folder (D:\\WWMI\\Mods\\RoverMod) "
+    );
     let root_folder: Option<PathBuf> = FileDialog::new().pick_folder();
 
     match root_folder {
@@ -24,11 +26,19 @@ fn main() {
                         match process_ini_file(&file_path_str, &hash_map) {
                             Ok(sections) => {
                                 if sections.is_empty() {
-                                    println!("SKIPPING {} -- Nothing to be added.", file_path.display());
-                                } else if let Err(e) = append_to_ini_file(&file_path_str, &file_path, &sections) {
+                                    println!(
+                                        "SKIPPING {} -- Nothing to be added.",
+                                        file_path.display()
+                                    );
+                                } else if let Err(e) =
+                                    append_to_ini_file(&file_path_str, &file_path, &sections)
+                                {
                                     eprintln!("Error writing to file: {}", e);
                                 } else {
-                                    println!("MODIFIED {} -- Should be FIXED\n", file_path.display());
+                                    println!(
+                                        "MODIFIED {} -- Should be FIXED\n",
+                                        file_path.display()
+                                    );
                                 }
                             }
                             Err(e) => eprintln!("Error processing file: {}", e),
@@ -52,9 +62,12 @@ fn main() {
 
 fn fetch_hash_map() -> io::Result<HashMap<String, String>> {
     println!("Fetching hash map from: {}", HASH_URL);
-    
-    let response = get(HASH_URL).map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
-    let content = response.text().map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
+
+    let response =
+        get(HASH_URL).map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
+    let content = response
+        .text()
+        .map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
 
     let mut hash_map = HashMap::new();
 
@@ -93,10 +106,11 @@ fn find_ini_files(root_folder: &Path) -> Vec<PathBuf> {
     ini_files
 }
 
-fn process_ini_file(file_path: &str, hash_map: &HashMap<String, String>) -> io::Result<Vec<String>> {
+fn process_ini_file(
+    file_path: &str,
+    hash_map: &HashMap<String, String>,
+) -> io::Result<Vec<String>> {
     let path = Path::new(file_path);
-    let file = File::open(path)?;
-    let reader = io::BufReader::new(file);
 
     let mut sections: Vec<String> = Vec::new();
     let mut current_section: Vec<String> = Vec::new();
@@ -105,9 +119,42 @@ fn process_ini_file(file_path: &str, hash_map: &HashMap<String, String>) -> io::
     let mut has_modified_hash = false;
     let mut hash_set: HashSet<String> = HashSet::new(); // Store all existing hash values
 
+    // First, clean the file by removing any [Texture..._LOWQ] sections
+    let cleaned_lines: Vec<String> = {
+        let file = File::open(path)?;
+        let reader = io::BufReader::new(file);
+
+        let mut lines = Vec::new();
+        let mut skip_section = false;
+
+        for line in reader.lines() {
+            let line = line?;
+            let trimmed = line.trim();
+
+            if trimmed.starts_with('[') && trimmed.ends_with(']') {
+                // Check if this is a [Texture..._LOWQ] section
+                if trimmed.to_lowercase().starts_with("[texture")
+                    && trimmed.to_lowercase().ends_with("_lowq]")
+                {
+                    skip_section = true;
+                    continue; // Don't include this section header
+                } else {
+                    skip_section = false;
+                }
+            }
+
+            if !skip_section {
+                lines.push(line);
+            }
+        }
+
+        lines
+    };
+
+    std::fs::write(file_path, cleaned_lines.join("\n") + "\n")?;
+
     // First pass: Collect existing hash values in the file
-    for line in reader.lines() {
-        let line = line?;
+    for line in &cleaned_lines {
         let trimmed_line = line.trim();
 
         if trimmed_line.starts_with(';') {
@@ -122,12 +169,7 @@ fn process_ini_file(file_path: &str, hash_map: &HashMap<String, String>) -> io::
         }
     }
 
-    // Reopen the file for second pass: Process and modify sections
-    let file = File::open(path)?;
-    let reader = io::BufReader::new(file);
-
-    for line in reader.lines() {
-        let line = line?;
+    for line in &cleaned_lines {
         let trimmed_line = line.trim();
 
         if trimmed_line.starts_with(';') {
@@ -141,7 +183,8 @@ fn process_ini_file(file_path: &str, hash_map: &HashMap<String, String>) -> io::
             }
 
             // Reset for new section
-            in_texture_section = trimmed_line.starts_with("[Texture") && !trimmed_line.contains("_LOWQ]");
+            in_texture_section = trimmed_line.to_lowercase().starts_with("[texture")
+                && !trimmed_line.to_lowercase().ends_with("_lowq]");
             has_modified_hash = false;
             current_section.clear();
             section_header = trimmed_line.to_string();
@@ -154,7 +197,8 @@ fn process_ini_file(file_path: &str, hash_map: &HashMap<String, String>) -> io::
         } else if in_texture_section {
             // Detect "hash" lines in any format (normalize spaces)
             if let Some(pos) = trimmed_line.find("hash") {
-                let mut parts: Vec<&str> = trimmed_line[pos..].split('=').map(|s| s.trim()).collect();
+                let mut parts: Vec<&str> =
+                    trimmed_line[pos..].split('=').map(|s| s.trim()).collect();
                 if parts.len() == 2 {
                     let hash_value = parts[1]; // Get the actual hash value
                     if let Some(replacement) = hash_map.get(hash_value) {
@@ -180,7 +224,11 @@ fn process_ini_file(file_path: &str, hash_map: &HashMap<String, String>) -> io::
     Ok(sections)
 }
 
-fn append_to_ini_file(file_path: &str, file_path_buf: &PathBuf, sections: &[String]) -> io::Result<()> {
+fn append_to_ini_file(
+    file_path: &str,
+    file_path_buf: &PathBuf,
+    sections: &[String],
+) -> io::Result<()> {
     backup_file(file_path_buf);
 
     let mut file = OpenOptions::new().append(true).open(file_path)?;
@@ -194,7 +242,7 @@ fn append_to_ini_file(file_path: &str, file_path_buf: &PathBuf, sections: &[Stri
     Ok(())
 }
 
-fn backup_file(path: &PathBuf){
+fn backup_file(path: &PathBuf) {
     if let Some(stem) = path.file_stem() {
         let mut backup_path = path.clone();
         backup_path.set_extension(BACKUP_EXTENSION);
