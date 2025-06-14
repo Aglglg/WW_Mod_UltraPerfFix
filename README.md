@@ -1,4 +1,5 @@
-# If you wanna fork/continuing/contributing to this fixer tool
+## Fix Mod Textures on Wuthering Waves Ultra Performance Graphic Setting
+### If you wanna fork/continuing/contributing to this fixer tool
 Before dumping the textures
 Please do:
 1. Make sure on your Engine.ini wuwa config. There's line r.Streaming.FullyLoadUsedTextures=1
