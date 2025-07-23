@@ -10,3 +10,7 @@ Please do:
 
 #### Tools to help find hashes
 - [Image Comparator](https://github.com/Aglglg/Image-Comparator) - get matching textures between Quality & Ultra Performance textures
+
+---
+## Better way
+Perhaps fuzzy match texture is better
