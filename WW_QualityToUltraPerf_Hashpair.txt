@@ -475,18 +475,19 @@ b7e53c76:eb392df8
 53b0c79c:0feda44a
 
 #Phrolova
-584e289f:8511b6b8
-5ef9b4d3:83a62af4
-183fe440:c5607a67
-b55a11e4:68058fc3
-9b2007f8:467f99df
-be835337:63dccd10
-d054db9b:0d0b45bc
-dd620352:003d9d75
+e6819fc8:bbd761d6
+dd620352:a16642a8
+d8121963:12a61d5b
+b55a11e4:18fa0c23
+d054db9b:de9cf2bd
+cd8fe20c:06361c41
+584e289f:4563a698
+183fe440:c6cb37ba
+5ef9b4d3:25f2d74b
 
 #PhrolovaFlower
-353be995:f4d42942
-57e1a57c:11c1190b
+353be995:e86477b2
+57e1a57c:8abe3b5b
 
 
 #----------------OTHER/NPC/ENEMY--------------
@@ -747,5 +748,5 @@ c464c8d5:d45aa60e
 92ab1de5:33e39fcb
 
 
-#Hashpair data Last updated 13 June 2025
-#Update hashes ultra perf wuwa v2.4 (first week)
+#Hashpair data Last updated 25 July 2025
+#Update hashes ultra perf wuwa v2.5 (first week)
