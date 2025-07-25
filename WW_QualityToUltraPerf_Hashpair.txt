@@ -747,6 +747,12 @@ c464c8d5:d45aa60e
 68055536:4c85b24f
 92ab1de5:33e39fcb
 
+#PhrolovaInjured
+7b76485f:d40842bb
+6170e02a:0a4cf48b
+cc94ce39:9384ccd0
+d18149e4:734d3e03
+fa6bce7b:b5dc6d81
 
 #Hashpair data Last updated 25 July 2025
 #Update hashes ultra perf wuwa v2.5 (first week)
