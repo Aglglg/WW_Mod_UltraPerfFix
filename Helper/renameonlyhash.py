@@ -13,7 +13,7 @@ for root, dirs, files in os.walk(folder_path):
             _, ext = os.path.splitext(filename)
 
             # Extract the first 8 characters
-            new_name_part = filename[0 : 7]
+            new_name_part = filename[0 : 8]
 
             if len(new_name_part) < 8:
                 print(f"Skipping (name too short): {filename}")
