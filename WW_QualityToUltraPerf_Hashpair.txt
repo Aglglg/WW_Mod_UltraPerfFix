@@ -141,6 +141,21 @@ ecc1c90a:a7c10722
 fec2f60b:6607984f
 ffbd8eee:809051f1
 
+#Fleurdelys
+1c8589de:fb8a16ec
+40cd7ff6:fc062edb
+4bac35dd:cd769404
+50de5497:da683d1a
+8160bcb0:ea35ebf3
+8721570a:a48534cb
+b9a64e57:4b102194
+bd9cd630:7c9bea85
+c51948e5:d8e90315
+c9124759:af8d38bc
+d1534303:2295ab76
+ece8436e:e7d2e763
+fcb5b55f:42cbfba7
+
 #Changli
 0484ab73:5ec99b00
 1bc98900:76c338af
@@ -522,3 +537,6 @@ a07dd592:a9a8795c
 db2412ad:0b1417ec
 
 #PARTIAL FIX v2.6 (PART2)
+#ALL CHARACTERS in MENU
+#++ Camellya red hair, Fleurdelys
+#-- Character special states, injured states
