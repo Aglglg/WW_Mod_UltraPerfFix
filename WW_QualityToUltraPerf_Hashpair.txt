@@ -546,5 +546,5 @@ db2412ad:0b1417ec
 
 #PARTIAL FIX v2.6 (PART2)
 #ALL CHARACTERS in MENU
-#++ Camellya red hair, Fleurdelys
+#++ Camellya red hair, Fleurdelys, Cantarella Wet
 #-- Character special states, injured states
