@@ -544,7 +544,20 @@ de4463e0:5c656b51
 a07dd592:a9a8795c
 db2412ad:0b1417ec
 
-#PARTIAL FIX v2.6 (PART2)
+#Galbrena
+3c29f760:0666a6b6
+54d3f1fa:dccc0a7d
+73e396e6:88b47415
+153bf11f:7b936c21
+205adb6b:748ec8ca
+722aab39:89a19d25
+aa8d8af5:085efdd6
+b5e505fe:a8b646bf
+c121a71d:aa04026d
+cad50fd9:ba558afa
+d30b1a7a:ca596885
+
+#v2.7 Added Galbrena
 #ALL CHARACTERS in MENU
 #++ Camellya red hair, Fleurdelys, Cantarella Wet
 #-- Character special states, injured states
