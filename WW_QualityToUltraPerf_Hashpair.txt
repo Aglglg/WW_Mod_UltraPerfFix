@@ -557,7 +557,22 @@ c121a71d:aa04026d
 cad50fd9:ba558afa
 d30b1a7a:ca596885
 
-#v2.7 Added Galbrena
-#ALL CHARACTERS in MENU
-#++ Camellya red hair, Fleurdelys, Cantarella Wet
-#-- Character special states, injured states
+#Qiuyuan
+09a9dbc1:9f200dc9
+18184205:63b6b4ca
+4977b68f:5459b6de
+66e6fa10:bf5b05de
+aed40665:39e03b58
+b213bf63:ccb8dc47
+b5c941de:4198cc68
+c8dc4a2b:37c33b3a
+d30d805c:53b3898a
+d870255f:5e552c54
+e4dfca63:dfcad46c
+f07b6c56:d9749209
+f9de85f8:304e0106
+
+# v2.7 Added Galbrena & Qiuyuan
+# ALL CHARACTERS in MENU
+# ADDITION: Camellya red hair, Fleurdelys, Cantarella Wet
+# NOT INCLUDED: Character special states, injured states
