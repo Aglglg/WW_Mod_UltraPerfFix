@@ -572,7 +572,6 @@ f07b6c56:d9749209
 f9de85f8:304e0106
 
 #Chisa
-0c153c12:a10ad1f8
 0cc6f756:a7527f0c
 1131e4c1:3a9f7f31
 118a1a1f:24cad656
@@ -590,6 +589,7 @@ eca8e09b:581b8a04
 f1c2e889:e9ec3443
 f869e47c:64610d92
 fee91ed9:e18d5653
+ffa1f581:56795da7
 
 # v2.8 Added Chisa
 # ALL CHARACTERS in MENU
