@@ -571,7 +571,27 @@ e4dfca63:dfcad46c
 f07b6c56:d9749209
 f9de85f8:304e0106
 
-# v2.7 Added Galbrena & Qiuyuan
+#Chisa
+0c153c12:a10ad1f8
+0cc6f756:a7527f0c
+1131e4c1:3a9f7f31
+118a1a1f:24cad656
+1ae01aac:441efee6
+247f4c84:4e9c12d2
+37250244:df12df62
+3814c6cd:f935715c
+6fef6308:010ca0b2
+744045d5:d9c8c474
+9b396b0d:0728dabc
+a620843e:9bbda2bd
+c7a7ec1b:f1a27c48
+cd006f06:d353e07c
+eca8e09b:581b8a04
+f1c2e889:e9ec3443
+f869e47c:64610d92
+fee91ed9:e18d5653
+
+# v2.8 Added Chisa
 # ALL CHARACTERS in MENU
 # ADDITION: Camellya red hair, Fleurdelys, Cantarella Wet
 # NOT INCLUDED: Character special states, injured states
